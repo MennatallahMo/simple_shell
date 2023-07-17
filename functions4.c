@@ -76,10 +76,10 @@ char *path_checker(char *cmd)
 		return (NULL);
 	copy = malloc(sizeof(*copy) * (_strlen(path_env) + 1));
 	_strcpy(path_env, copy);
-	array = splitter(copy, ",");
+	array = splitter(copy, ":");
 	for (; array[j] != NULL; j++)
 	{
-		tmpb = _strcat(array[j], "//");
+		tmpb = _strcat(array[j], "/");
 		tmpa = _strcat(tmpb, cmd);
 		if (access(tmpa, F_OK) == 0)
 		{
