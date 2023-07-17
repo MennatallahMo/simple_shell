@@ -19,8 +19,8 @@ int main(int argc, char **argv)
 /* making infinite loop */
 	while (1)
 	{
-		printf("shell$ ");
 		non_interactive(data);
+		_puts("shell$ ");
 
 		if (getline(&(data->lineptr), &len, stdin) == -1)
 		{

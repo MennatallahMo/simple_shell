@@ -69,7 +69,7 @@ char *path_checker(char *cmd)
 {
 	char **array = NULL;
 	char *tmpa, *tmpb, *copy;
-	char *path_env = _getenv("PATH Environment");
+	char *path_env = _getenv("PATH");
 	int j = 0;
 
 	if (path_env == NULL || _strlen(path_env) == 0)
