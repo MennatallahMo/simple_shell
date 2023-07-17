@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 /* making infinite loop */
 	while (1)
 	{
-		_puts("shell$  ");
+		printf("shell$ ");
 		non_interactive(data);
 
 		if (getline(&(data->lineptr), &len, stdin) == -1)
