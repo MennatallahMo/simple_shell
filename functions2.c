@@ -27,16 +27,15 @@ char *_strchr(char *string, char character)
  *
  * Return: new formed string
  */
-
 char *_strcat(char *dest, char *origin)
 {
 	char *formed_str =  NULL;
 	int dest_length = _strlen(dest);
 	int origin_length = _strlen(origin);
 
-	formed_str = malloc((dest_length + origin_length + 1) * sizeof(*formed_str));
-	_strcpy(dest_length + formed_str, origin);
-	_strcpy(formed_str, dest);
+	formed_str = malloc(sizeof(*formed_str)*(dest_length + origin_length + 1));
+	_strcpy(dest , formed_str);
+	_strcpy(origin ,formed_str + dest_length);
 	formed_str[dest_length + origin_length] = '\0';
 	return (formed_str);
 }
