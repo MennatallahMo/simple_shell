@@ -103,8 +103,8 @@ void cmd_parser(char *cmd, data_t *data)
 		free(path_env);
 		execute_path_cmd(data);
 	}
-
-	invalid_cmd(data);
+	else
+		invalid_cmd(data);
 }
 
 /**
