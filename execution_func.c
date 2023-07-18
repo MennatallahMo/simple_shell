@@ -28,11 +28,11 @@ void execute_ex_cmd(data_t *data)
 			perror(_getenv("PWD"));
 			exit(2);
 		}
-		else
-		{
-			waitpid(PID, &(data->status), 0);
-			data->status >>= 8;
-		}
+	}
+	else
+	{
+		waitpid(PID, &(data->status), 0);
+		data->status >>= 8;
 	}
 }
 

@@ -93,7 +93,10 @@ void cmd_parser(char *cmd, data_t *data)
 	for (; cmd[j] != '\0'; j++)
 	{
 		if (cmd[j] == '/')
+		{
 			execute_ex_cmd(data);
+			return;
+		}
 	}
 
 	path_env = path_checker(cmd);
@@ -102,9 +105,9 @@ void cmd_parser(char *cmd, data_t *data)
 	{
 		free(path_env);
 		execute_path_cmd(data);
+		return;
 	}
-	else
-		invalid_cmd(data);
+	invalid_cmd(data);
 }
 
 /**
