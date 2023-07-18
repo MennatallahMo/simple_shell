@@ -33,9 +33,9 @@ char *_strcat(char *dest, char *origin)
 	int dest_length = _strlen(dest);
 	int origin_length = _strlen(origin);
 
-	formed_str = malloc(sizeof(*formed_str)*(dest_length + origin_length + 1));
-	_strcpy(dest , formed_str);
-	_strcpy(origin ,formed_str + dest_length);
+	formed_str = malloc(sizeof(*formed_str) * (dest_length + origin_length + 1));
+	_strcpy(dest, formed_str);
+	_strcpy(origin, formed_str + dest_length);
 	formed_str[dest_length + origin_length] = '\0';
 	return (formed_str);
 }
