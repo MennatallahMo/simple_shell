@@ -62,7 +62,6 @@ char *_strcat(char *dest, char *origin);
 int _strlen(char *s);
 void _strcpy(char *src, char *dest);
 int _strcmp(char *s1, char *s2);
-void non_interactive(data_t *data);
 
 /*global variables*/
 extern char **environ;

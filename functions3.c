@@ -56,32 +56,7 @@ void exit_shell(data_t *data)
 		_puts_e("shell$: exit only one argument\n");
 }
 
-/**
- * non_interactive - non interactive mode
- * @data: the struct of shell data
- */
-void non_interactive(data_t *data)
-{
-	size_t len = 0;
 
-	if (!(isatty(STDIN_FILENO)))
-	{
-		while (getline(&(data->lineptr), &len, stdin) != -1)
-		{
-			check_new_lines(data->lineptr);
-			data->command = splitter(data->lineptr, " ");
-			if (data->command[0] == NULL)
-			{
-				free(data->command);
-				break;
-			}
-			cmd_parser(data->command[0], data);
-			free(data->command);
-		}
-		free(data->lineptr);
-		exit(data->status);
-	}
-}
 /**
  * _strlen - returns the length of string
  * @s: the string
