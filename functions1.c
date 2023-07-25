@@ -87,7 +87,10 @@ void cmd_parser(char *cmd, data_t *data)
 	for (; builtin_cmd[j] != NULL ; j++)
 	{
 		if (_strcmp(cmd, builtin_cmd[j]) == 0)
+		{
 			execute_builtin_cmd(data);
+			return;
+		}
 	}
 
 	for (; cmd[j] != '\0'; j++)
