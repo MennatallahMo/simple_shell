@@ -45,19 +45,22 @@ int _strcspn(char *s1, char *s2)
  */
 int _atoi(char *string)
 {
-	unsigned int u = 0;
+	unsigned int result = 0;
 
-	do {
-		if (*string == '-')
-			return (-1);
-		else if ((*string > '9' || *string < '0') && *string != '\0')
+	while (*string)
+	{
+		if (*string == '-' || ((*string > '9' || *string < '0') && *string != '\0'))
 			return (-1);
 		else if (*string <= '9'  && *string >= '0')
-			u = (u * 10) + (*string - '0');
-		else if (u > 0)
+		{
+			result *= 10;
+			result += (*string - '0');
+		}
+		else if (result > 0)
 			break;
-	} while (*string++);
-	return (u);
+		string++;
+	}
+	return (result);
 }
 
 /**
