@@ -40,7 +40,7 @@ void exit_shell(data_t *data)
 		if (argument == -1)
 		{
 			_puts_e(data->program_name);
-			_puts_e(":: 1: exit: Invalid number: ");
+			_puts_e(": 1: exit: Illegal number: ");
 			_puts_e(data->command[1]);
 			_puts_e("\n");
 			data->status = 2;

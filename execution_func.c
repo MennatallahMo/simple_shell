@@ -69,6 +69,6 @@ void invalid_cmd(data_t *data)
 	_puts_e(data->program_name);
 	_puts_e(": 1: ");
 	_puts_e(data->command[0]);
-	_puts_e(": No such file or directory\n");
+	_puts_e(": not found\n");
 	data->status = 127;
 }
