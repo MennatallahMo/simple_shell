@@ -60,7 +60,7 @@ void execute_path_cmd(data_t *data)
 	}
 }
 /**
- * invalid_cmd - handling invalid commands
+ * invalid_cmd - handling the invalid commands of the struct data
  * @data: the struct of shell data
  */
 void invalid_cmd(data_t *data)
