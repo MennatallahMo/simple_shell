@@ -37,7 +37,7 @@ void execute_ex_cmd(data_t *data)
 }
 
 /**
- * execute_path_cmd - execute path commands
+ * execute_path_cmd - execute the path commands of the struct shell
  * @data: the struct of data of shell
  */
 void execute_path_cmd(data_t *data)
