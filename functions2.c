@@ -21,7 +21,7 @@ char *_strchr(char *string, char character)
 }
 
 /**
- *_strcat - joins two strings together
+ *_strcat - joins two strings together by concatenation
  *@dest: string to be joined to
  *@origin: string want to join
  *
