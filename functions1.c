@@ -72,7 +72,7 @@ char *_strtok(char *s, char *d, char **p)
 	return (s);
 }
 /**
- * cmd_parser - checks type of the command
+ * cmd_parser - checks the type of the command resulting
  *
  * @data: the structure of data
  * @cmd: the command I want to be parsed
