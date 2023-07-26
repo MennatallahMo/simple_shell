@@ -52,8 +52,6 @@ void exit_shell(data_t *data)
 			exit(argument);
 		}
 	}
-	else
-		_puts_e("shell$: exit only one argument\n");
 }
 
 
